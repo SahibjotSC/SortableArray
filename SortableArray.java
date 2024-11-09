@@ -12,11 +12,18 @@ public class SortableArray {
         sortableArray.printArray();
 
         System.out.print("Sorted with Java sort: ");
+        sortableArray = new SortableArray(numbers);
         sortableArray.sortUsingJavaSort();
         sortableArray.printArray();
 
         System.out.print("Sorted with Bubble Sort: ");
+        sortableArray = new SortableArray(numbers);
         sortableArray.sortUsingBubbleSort();
+        sortableArray.printArray();
+
+        System.out.print("Sorted with Selection Sort: ");
+        sortableArray = new SortableArray(numbers);
+        sortableArray.sortUsingSelectionSort();
         sortableArray.printArray();
     }
 
@@ -37,6 +44,20 @@ public class SortableArray {
                     array[j + 1] = temp;
                 }
             }
+        }
+    }
+
+    public void sortUsingSelectionSort() {
+        for (int i = 0; i < array.length - 1; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j] < array[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            int temp = array[minIndex];
+            array[minIndex] = array[i];
+            array[i] = temp;
         }
     }
 
