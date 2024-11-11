@@ -4,7 +4,7 @@ public class SortableArray {
     private int[] array;
 
     public static void main(String[] args) {
-        int[] numbers = {5, 3, 8, 4, 2};
+        int[] numbers = {5, 3, 8, 4, 2, 1, 6, 7};
 
         SortableArray sortableArray = new SortableArray(numbers);
 
